@@ -13,16 +13,28 @@ class PagesController extends Controller
     return view('pages.index')->with('title', $title);
     }
 
-    public function about(){
-        $title = 'About us';
-    return view('pages.about')->with('title', $title);
+    public function status(){
+        $title = 'Status';
+    return view('pages.status')->with('title', $title);
     }
 
-    public function services(){
-        $data = array(
-            'title'=>'services',
-            'services' => ['web design', 'programming', 'SEO']
-        );
-        return view('pages.services')->with($data);
+    public function guests(){
+        $title = 'guests';
+        return view('pages.guests')->with($title);
+    }
+
+    public function rooms(){
+        $title = 'Rooms';
+        return view('pages.rooms')->with($title);
+    }
+
+    public function nextCheckouts(){
+        $title = 'nextCheckouts';
+        return view('pages.nextCheckouts')->with($title);
+    }
+
+    public function admin(){
+        $title = 'Admin';
+        return view('pages.admin')->with($title);
     }
 }
